@@ -1,13 +1,14 @@
 <template>
     <div class="main">
 
+        <small>#{{ note.id }}</small>
         <time>{{ note.time }}</time>
-        <h1>
-            <small>#{{ note.id }}</small>
-            {{ note.title }}
-        </h1>
 
-        <div>{{ note.content }}</div>
+        <button type="button" name="button">Save</button>
+
+        <input class="title" type="text" name="title" v-model="note.title">
+
+        <textarea class="content" name="content" v-model="note.content"></textarea>
 
     </div>
 </template>
@@ -20,6 +21,10 @@ export default {
         note(){
             return this.$store.getters.selectedNote;
         }
+    },
+
+    watch: {
+
     }
 }
 </script>

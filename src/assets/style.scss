@@ -85,6 +85,23 @@ body{
 
 .main{
     padding: $spacer;
+
+    .title, .content{
+        display: block;
+        width: 100%;
+        border: 0;
+        margin: $spacer 0;
+        background: #eee;
+        padding: 6px;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+
+    .content{
+        height: 80%
+    }
 }
 
 time{
